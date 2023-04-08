@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter , Routes, Route } from 'react-router-dom'
 import Layout from "../../components/Layout/Layout";
 import Header from "../../components/Header/Header";
 import CheckIn from "../../components/CheckIn/CheckIn";
