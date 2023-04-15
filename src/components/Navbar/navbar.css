@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #1d3557;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logo{
+    color: #ffbe0b;
+    font-size: 37px;
+    cursor: pointer;
+}
+
+.navbar_end{
+    display: flex;
+    color: #ffbe0b;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.item{
+    margin: 5px;
+    position: relative;
+    padding-top: 10px;
+}
+.navbar_end  a{
+    text-decoration: none;
+    font-weight: bold; 
+    border-radius: 20px;
+    float: left;
+    text-align: center;
+}
+
+.navbar_end  a:hover{
+    background: #ffbe0b;
+    color: #fff;
+    transition: .3s;
+}
+.navbar_end a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navbar_end a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+    font-weight: bolder;
+}
+
+.dropdown .dropbtn{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: o;
+    cursor: pointer;
+
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+ 
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.button{
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ffbe0b;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.button:hover{
+    background: #ffbe0b;
+    color: #fff;
+}
+
