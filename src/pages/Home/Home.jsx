@@ -5,6 +5,9 @@ import Header from "../../components/Header/Header";
 import CheckIn from "../../components/CheckIn/CheckIn";
 import About from "../../components/About/About";
 import Rooms from "../../components/Rooms/Rooms";
+import Team from '../../components/Team/Team';
+import Staffc from '../../components/Staffc/Staffc';
+import Menu from '../../components/Menu/Menu';
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
        <CheckIn />
          <About/>
          <Rooms/>
+         <Team/>
+         <Staffc/>
+         <Menu/>
      </Layout>
   )
 }
