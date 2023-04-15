@@ -9,10 +9,10 @@ import Rooms from "../../components/Rooms/Rooms";
 export default function Home() {
   return (
      <Layout>
-       <Header/>
-       <CheckIn />
+       {/* <Header/>
+       <CheckIn /> */}
          <About/>
-         <Rooms/>
+         {/* <Rooms/> */}
      </Layout>
   )
 }
