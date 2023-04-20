@@ -11,7 +11,7 @@ export default function Menu() {
             <div className='column-1'>
                 <div className='card-1'>
                     <div className='card-image-1'>
-                        <img src="https://kartinkin.net/uploads/posts/2021-04/1617249568_35-p-pitstsa-na-belom-fone-krasivo-45.jpg" alt="" width={300}/>
+                        <img src="https://kartinkin.net/uploads/posts/2021-04/1617249568_35-p-pitstsa-na-belom-fone-krasivo-45.jpg" alt="" width={250}/>
                     </div>
                     <div className='card-content-1'>
                         <div className='media-1'>
@@ -28,7 +28,7 @@ export default function Menu() {
             <div className='column-1'>
                 <div className='card-1'>
                     <div className='card-image-1'>
-                        <img src="https://maki-sushi.ru/wp-content/uploads/2020/04/PA089621-scaled.jpg" alt="" width={300}/>
+                        <img src="https://kartinkin.net/uploads/posts/2021-04/1617249568_35-p-pitstsa-na-belom-fone-krasivo-45.jpg" alt="" width={250}/>
                     </div>
                     <div className='card-content-1'>
                         <div className='media-1'>
@@ -46,13 +46,13 @@ export default function Menu() {
             <div className='column-1'>
                 <div className='card-1'>
                     <div className='card-image-1'>
-                        <img src="https://proprikol.ru/wp-content/uploads/2020/11/kartinki-piczcza-40.jpeg" alt="" width={300}/>
+                        <img src="https://kartinkin.net/uploads/posts/2021-04/1617249568_35-p-pitstsa-na-belom-fone-krasivo-45.jpg" alt="" width={250}/>
                     </div>
                     <div className='card-content-1'>
                         <div className='media-1'>
                             <div className='media-content-1'>
                                 <h1>CHICKEN</h1>
-                                <p>Tomato sauce, mozzarella, chicken, pineapple* & bbq sauce</p>
+                                <p>Tomato sauce, mozzare  pineapp sauce</p>
                                 <p>$25.00</p>
                                 <button className='button-1'>ADD TO CART</button>
                             </div>
@@ -63,14 +63,17 @@ export default function Menu() {
             <div className='column-1'>
                 <div className='card-1'>
                     <div className='card-image-1'>
-                        <img src="https://shardenkorolev.ru/uploads/s/a/0/k/a0kaiytdu556/img/full_nAvg7JyO.jpg" alt="" width={300}/>
+                        <img src="https://kartinkin.net/uploads/posts/2021-04/1617249568_35-p-pitstsa-na-belom-fone-krasivo-45.jpg" alt="" width={250}/>
                     </div>
                     <div className='card-content-1'>
                         <div className='media-1'>
                             <div className='media-content-1'>
                                 <h1>HAWAIIAN</h1>
-                                <p>Tomato sauce, mozzarella, ham & pineapple</p>
+                                
+                                <p>Tomato sauce, mozzarella, ham & pianpp</p>
+                                
                                 <p>$16.00</p>
+                                
                                 <button className='button-1'>ADD TO CART</button>
                             </div>
                         </div>
