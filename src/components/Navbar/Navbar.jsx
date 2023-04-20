@@ -1,5 +1,7 @@
 import React from "react";
 import "./navbar.css";
+import { Link, Navigate } from "react-router-dom";
+import { AiFillCaretDown } from 'react-icons/ai';
 
 export default function Navbar() {
   return (
@@ -11,9 +13,10 @@ export default function Navbar() {
           <a className="item">ABOUT</a>
           <a className="item">SERVICES</a>
           <a className="item">ROOMS</a>
+          <a className="item">PAGES</a>
           <div class="dropdown">
-            <button class="dropbtn">PAGES
-              <i class="fa fa-caret-down"></i>
+            <button class="dropbtn">
+              <AiFillCaretDown/>
             </button>
             <div class="dropdown-content">
               <a href="#">Booking</a>
@@ -24,10 +27,8 @@ export default function Navbar() {
           {/* <a className="item">PAGES</a> */}
           <a className="item">CONTACT</a>
 
-          <button className="button" type="button">
-            PREMIUM VERSION
-          </button>
         </div>
+        <Link to="/sign-in"><button className="navbar_button">Login</button></Link>  
       </nav>
     </div>
   );

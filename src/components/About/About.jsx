@@ -4,7 +4,6 @@ import { FaHotel } from 'react-icons/fa'
 import { AiFillSetting } from 'react-icons/ai'
 import { AiOutlineTeam } from 'react-icons/ai'
 
-
 function About(props) {
     return (
         <section className='about__section'>
