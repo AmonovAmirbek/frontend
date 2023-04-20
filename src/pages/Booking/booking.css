@@ -1,0 +1,83 @@
+body {
+    background-color: #F1F8FF;
+}
+
+
+.booking__section {
+    width: 95%;
+    margin: 0px auto;
+    background: white;
+	text-align: center;
+	height: 100vh;
+}
+.booking__section-header {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	width: 100%;
+}
+.booking__section h4 {
+    display: inline-block;
+    font-weight: 800;
+    color: #FEA116;
+}
+.booking__section h1 {
+    color: #0F172B;
+    font-weight: 800;
+    font-size: 40px;
+}
+.booking__section span {
+    color: #FEA116;
+}
+
+.form-css {
+	display: flex;
+	width: 50%;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 20px;
+}
+.form-css input {
+	width: 49%;
+	padding: 20px;
+}
+.form-css .fullwidth {
+	width: 100%;
+}
+textarea.fullwidth {
+	height: 100px;
+	padding: 20px;
+}
+select.fullwidth {
+	height: 50px;
+	padding: 10px;
+}
+select.halfwidth {
+	width: 49%;
+	padding: 20px;
+}
+.booking__section-images__columns {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+}
+
+.booking_button{
+	background: #FEA116;
+	height: 60px;
+	width: 700px;
+	border: 2px solid #FEA116;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.booking_button:hover{
+	background: transparent;
+	color: #333;
+}
+

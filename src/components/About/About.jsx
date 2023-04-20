@@ -21,7 +21,7 @@ function About(props) {
                         <div className='about__cards-card'>
                             <  FaHotel fill='#FEA116' size={50}/>
                             <h1>1234</h1>
-                            <p>Staffs</p>                 
+                            <p>Rooms</p>                 
                         </div>
                         <div className='about__cards-card'>
                             <AiFillSetting fill='#FEA116' size={50}/>
@@ -31,10 +31,10 @@ function About(props) {
                         <div className='about__cards-card'>
                             <AiOutlineTeam fill='#FEA116' size={50}/>
                             <h1>1234</h1>
-                            <p>Staffs</p>
+                            <p>Clients</p>
                         </div>
                     </div>
-                    <button>EXPLORE MORE</button>
+                    <button className='about__button'>EXPLORE MORE</button>
                 </div>
                 <div className='images__columns'>
                     <div className='images__column left'>

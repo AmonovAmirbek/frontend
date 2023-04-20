@@ -71,3 +71,7 @@ body {
     color: #FEA116;
     
 }
+.about__button:hover{
+    background: transparent;
+	color: #333; 
+}
