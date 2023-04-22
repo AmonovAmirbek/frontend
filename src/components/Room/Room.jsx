@@ -10,10 +10,10 @@ const Room = () => {
   return ( 
     <div className="card">
       <img src={`https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?cs=srgb&dl=pexels-jean-van-der-meulen-1454806.jpg&fm=jpg}`} alt="" />
-      <div class="bac-img img-1">
-                    <p class="img-content">100$/Night</p>
+      <div className="bac-img img-1">
+                    <p className="img-content">100$/Night</p>
                 </div>
-      <div class="card__content"> 
+      <div className="card__content"> 
         <div className="card__content-top">
           <h4><b>Junior Suite</b></h4>
           <div className="card__content-top__stars">
