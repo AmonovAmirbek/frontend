@@ -1,83 +1,84 @@
 body {
-    background-color: #F1F8FF;
-    
-    
+  background-color: #f1f8ff;
 }
 
 .about__section {
-    width: 95%;
-    margin: 0px auto;
-    background: white;
-    height: 650px;
+  width: 95%;
+  margin: 0px auto;
+  background: white;
+  height: 650px;
 }
 .about__section-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .about__section-content {
-    width: 50%;
-    padding: 80px;
+  width: 50%;
+  padding: 80px;
 }
 
 .about__cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
 }
 .about__cards-card {
-    text-align: center;
-    border: 7px double #dee2e6;
-    padding: 15px 60px;
+  text-align: center;
+  border: 7px double #dee2e6;
+  padding: 15px 60px;
 }
-.about__cards-card h1, p {
-    margin: 2px 0px;
+.about__cards-card h1,
+p {
+  margin: 2px 0px;
 }
 .about__cards-card h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 .about__section-content button {
-    padding: 15px 35px;
-    color: white;
-    background-color: #FEA116;
-    border: 0px;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
+  padding: 15px 35px;
+  color: white;
+  background-color: #fea116;
+  border: 0px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
 }
-
 
 .images__columns {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
 }
 .images__column {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .images__column.right {
-    align-items: self-start;
+  align-items: self-start;
 }
 .images__column.left {
-    align-items: self-end;
+  align-items: self-end;
 }
-.about__section-content h6{
-    color: #FEA116;
-    font-size: 23px;
-    margin-bottom: 9px;
+.about__section-content h6 {
+  color: #fea116;
+  font-size: 23px;
+  margin-bottom: 9px;
 }
-.about__section-content span{
-    color: #FEA116;
-    font-size: 28px;
-    
+.about__section-content span {
+  color: #fea116;
+  font-size: 28px;
 }
 
-.about__section-content p{
-    font-size: 17px;
-    padding: 17px;
+.about__section-content p {
+  font-size: 17px;
+  padding: 17px;
+}
+.about__button:hover {
+  background: transparent;
+  color: #333;
 }
