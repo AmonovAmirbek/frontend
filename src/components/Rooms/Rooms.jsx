@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Room from "../Room/Room";
 import './rooms.css'
+import axios from 'axios';
 
-function Rooms(props) {
+function Rooms() {
+    const [classes, setClasses] = useState([])
+    useEffect(() => {
+        axios.get("http://localhost:1337/api/classes?populate=rooms&populate=image")
+            .then(res => setClasses(res.data.data))
+    }, [])
+    console.log(classes)
     return (
         <div className='rooms__section'>
             <div className="rooms__section-header">
@@ -10,9 +17,9 @@ function Rooms(props) {
                 <h1>Explore Our <span>ROOMS</span></h1>
             </div>
             <div className="rooms__section-content">
-                <Room />
-                <Room />
-                <Room />
+               {classes && classes.map(item => (
+                <Room item={item}/>
+               ))}
             </div>
 
             <div className="rooms__footer">

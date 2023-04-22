@@ -8,7 +8,7 @@ function About(props) {
     return (
         <section className='about__section'>
             <div className='about__section-container'>
-                <div className="about__section-content">
+                <div className="about__section-content" id='about'>
                     <h6>About Us ____</h6>
                     <h1>"Welcome to"<span>Hotelier</span></h1>
                     <p>

@@ -10,7 +10,7 @@ export default function Navbar() {
         <h1 className="logo">HOTELIER</h1>
         <div className="navbar_end">
           <a className="item">HOME</a>
-          <a className="item">ABOUT</a>
+          <a className="item" href="#about">ABOUT</a>
           <a className="item">SERVICES</a>
           <a className="item">ROOMS</a>
           <a className="item">PAGES</a>
