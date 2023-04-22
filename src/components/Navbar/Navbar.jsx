@@ -24,7 +24,7 @@ export default function Navbar() {
               <a href="#">Testimonial</a>
             </div>
           </div>
-          <a className="item">CONTACT</a>
+          <a href="http://localhost:3000/pool" className="item nav_item">POOL</a>
 
         </div>
         <Link to="/sign-in"><button className="navbar_button">Login</button></Link>  

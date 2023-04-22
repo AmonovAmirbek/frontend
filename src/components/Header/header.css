@@ -8,12 +8,10 @@
     width: 100; 
     font-size: xx-large ;
     margin-top: 100;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     color: #fff;
-    padding: 80px;
+    padding: 30px;
     height: 600px;
-    
-    
   }
 
   .text{
