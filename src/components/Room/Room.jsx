@@ -7,9 +7,9 @@ import { FaWifi } from 'react-icons/fa'
 
 
 const Room = () => {
-  return (
+  return ( 
     <div className="card">
-      <img src="https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?cs=srgb&dl=pexels-jean-van-der-meulen-1454806.jpg&fm=jpg" alt="" />
+      <img src={`https://images.pexels.com/photos/1454806/pexels-photo-1454806.jpeg?cs=srgb&dl=pexels-jean-van-der-meulen-1454806.jpg&fm=jpg}`} alt="" />
       <div class="bac-img img-1">
                     <p class="img-content">100$/Night</p>
                 </div>
