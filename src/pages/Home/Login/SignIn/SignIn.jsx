@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { HiLockClosed } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignIn(props) {
   const [email, setEmail] = useState("");
@@ -16,32 +16,30 @@ export default function SignIn(props) {
 
   const signIn = (e) => {
     e.preventDefault();
-    if (password === password) {
-      axios
-        .post("http://localhost:1337/api/users/", {
-          username: username,
-          email: email,
-          password: password,
-          confirmed: true,
-          role: 1,
-        })
-        .then((res) => navigate("/"))
-        .catch((err) => console.log(err));
-    }
+    axios
+      .post("http://localhost:1337/api/users/", {
+        username: username,
+        email: email,
+        password: password,
+        confirmed: true,
+        role: 1,
+      })
+      .then((res) => navigate("/"))
+      .catch((err) => console.error(err));
   };
   return (
     <div className="signIn-section">
       <div className="wrapper">
         <a href="http://localhost:3000">
-        <Link to="/">
-          <span className="icon_close">
-            <AiOutlineClose />
-          </span>
-        </Link>
+          <Link to="/">
+            <span className="icon_close">
+              <AiOutlineClose />
+            </span>
+          </Link>
         </a>
         <div className="form_box register">
           <h2>Registration</h2>
-          <form action="#">
+          <form onSubmit={e => signIn(e)}>
             <div className="input_box">
               <span className="sign_icon">
                 <FaUser />

@@ -8,6 +8,7 @@ body {
     width: 95%;
     margin: 0px auto;
     background: white;
+    height: 650px;
 }
 .about__section-container {
     display: flex;
@@ -16,7 +17,7 @@ body {
 
 .about__section-content {
     width: 50%;
-    padding: 30px;
+    padding: 80px;
 }
 
 .about__cards {
@@ -43,7 +44,9 @@ body {
     border: 0px;
     font-weight: 700;
     font-size: 15px;
+    cursor: pointer;
 }
+
 
 .images__columns {
     display: flex;
@@ -65,9 +68,16 @@ body {
 }
 .about__section-content h6{
     color: #FEA116;
-    font-size: 25px;
+    font-size: 23px;
+    margin-bottom: 9px;
 }
 .about__section-content span{
     color: #FEA116;
+    font-size: 28px;
     
+}
+
+.about__section-content p{
+    font-size: 17px;
+    padding: 17px;
 }

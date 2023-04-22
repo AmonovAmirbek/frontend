@@ -11,7 +11,7 @@ function Header(props) {
             <h1>Discover A Brand</h1>
             <h1>Luxurious Hotel</h1>
             <div className="buttons">
-                <button className='button' >OUR ROOM</button>
+                <button className='button header_btn' >OUR ROOM</button>
                 <button className='button'>OUR RESTORAN</button>
             </div>
         </div>

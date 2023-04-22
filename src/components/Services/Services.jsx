@@ -11,12 +11,13 @@ import "react-multi-carousel/lib/styles.css";
 import Product from "./Product";
 import { productData, responsive } from "./Data";
 
-export default function Services() {
+export default function Services(props) {
   const product = productData.map((item) => (
     <Product
       name={item.name}
       url={item.imageurl}
       description={item.description}
+      key={item.id}
     />
   ));
 

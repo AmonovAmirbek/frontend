@@ -14,17 +14,16 @@ export default function Navbar() {
           <a className="item">SERVICES</a>
           <a className="item">ROOMS</a>
           <a className="item">PAGES</a>
-          <div class="dropdown">
-            <button class="dropbtn">
+          <div className="dropdown">
+            <button className="dropbtn">
               <AiFillCaretDown/>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="#">Booking</a>
               <a href="#">Our Team</a>
               <a href="#">Testimonial</a>
             </div>
           </div>
-          {/* <a className="item">PAGES</a> */}
           <a className="item">CONTACT</a>
 
         </div>
