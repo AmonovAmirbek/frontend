@@ -1,0 +1,66 @@
+.section__55 {
+  background: rgb(243, 239, 239);  
+
+}
+
+.columns__55 {
+   justify-content: space-between;
+   display: flex;
+   flex-wrap: wrap;
+   width: 90%;
+   margin: 0px auto;
+   justify-content: space-evenly;
+   font-size: large;
+  
+    
+}
+
+.room_img {
+    margin-top: 65px;
+    margin-bottom: 10%;
+    margin-right: 150px;
+    border: 2px solid #333;
+  
+    
+
+}
+
+.column__45 {
+    margin-top: 39px;
+    text-align: center;
+    margin-top: 90px;
+   
+
+}
+
+.button__77 {
+    color: white;
+    width: 300px;
+    height: 40px;
+    background: #FEA116;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    backdrop-filter: blur(15px);
+ 
+
+}
+
+.text__76 {
+    color: red;
+}
+
+.text__80 {
+    color: green;
+}
+
+.button__77:hover{
+    background: hwb(34 19% 0%);
+    color: #333;
+    
+    
+}
+
+
