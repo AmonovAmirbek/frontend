@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./signIn.css";
+import "./signUp.css";
 import { MdEmail } from "react-icons/md";
 import { HiLockClosed } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function SignIn(props) {
+export default function SignUp(props) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
-  const signIn = (e) => {
+  const signUp = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:1337/api/users/", {
@@ -24,7 +24,7 @@ export default function SignIn(props) {
         confirmed: true,
         role: 1,
       })
-      .then((res) => navigate("/"))
+      .then((res) => navigate("/sign-in"))
       .catch((err) => console.error(err));
   };
   return (
@@ -39,7 +39,7 @@ export default function SignIn(props) {
         </a>
         <div className="form_box register">
           <h2>Registration</h2>
-          <form onSubmit={e => signIn(e)}>
+          <form onSubmit={e => signUp(e)}>
             <div className="input_box">
               <span className="sign_icon">
                 <FaUser />
@@ -87,7 +87,7 @@ export default function SignIn(props) {
             <div className="login_register">
               <p>
                 Already have an account?
-                <Link to="/sign-up">Login</Link>
+                <Link to="/sign-in">Login</Link>
               </p>
             </div>
           </form>

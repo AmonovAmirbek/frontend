@@ -25,6 +25,9 @@
   width: 40%;
 }
 
+.footer-distributed .footer-left a{
+  cursor: pointer;
+}
 
 .footer-distributed h3 {
   color: #ffffff;

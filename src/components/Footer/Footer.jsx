@@ -17,17 +17,17 @@ export default function Footer() {
         </h3>
 
         <p className="footer-links">
-          <a href="#" className="link-1">
+          <a  className="link-1">
             Home
           </a>
 
-          <a href="#">About</a>
+          <a id="about">About</a>
 
-          <a href="#">Services</a>
+          <a id="services">Services</a>
 
-          <a href="#">Rooms</a>
+          <a id="rooms">Rooms</a>
 
-          <a href="#">Contact</a>
+          <a id="menu">Menu</a>
         </p>
 
         <p className="footer-company-name">HOTELIER © 2015</p>

@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./signUp.css";
+import "./signIn.css";
 import { MdEmail } from "react-icons/md";
 import { HiLockClosed } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
-export default function SignUp(props) {
+export default function SignIn(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.removeItem("token")
+    localStorage.removeItem("user")
+  }, [])
 
   const signIn = (event) => {
     event.preventDefault();
@@ -20,8 +25,9 @@ export default function SignUp(props) {
         password,
       })
       .then((res) => {
-        localStorage.setItem("user", JSON.stringify(res.data.data));
-        localStorage.setItem("token", JSON.stringify(res.data.data));
+        console.log(res)
+        localStorage.setItem("user", JSON.stringify(res.data.user));
+        localStorage.setItem("token", JSON.stringify(res.data.jwt));
         navigate("/");
       })
       .catch((err) => console.error(err));
@@ -74,7 +80,7 @@ export default function SignUp(props) {
             <div className="login_register">
               <p>
                 Don't have an account?
-                <Link to="/sign-in">Register</Link>
+                <Link to="/sign-up">Register</Link>
               </p>
             </div>
           </form>

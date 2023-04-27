@@ -42,8 +42,9 @@ p {
   background-color: #fea116;
   border: 0px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   cursor: pointer;
+  border: 2px solid #fea116;
 }
 
 .images__columns {

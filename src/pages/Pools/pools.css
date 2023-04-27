@@ -1,0 +1,20 @@
+* {
+  margin: auto;
+}
+
+
+
+.pool__section-header {
+  display: inline-block;
+  font-weight: 800;
+  color: #fea116;
+  padding-bottom: 30px;
+  margin: 0px;
+}
+
+.pool__section-header h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+

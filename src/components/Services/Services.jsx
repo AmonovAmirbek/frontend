@@ -1,7 +1,7 @@
 import React from "react";
 import { FaHotel } from "react-icons/fa";
 import { BiRestaurant } from "react-icons/bi";
-import { TbSwimming } from "react-icons/tb";
+import { TbId, TbSwimming } from "react-icons/tb";
 import { FaSwimmer } from "react-icons/fa";
 import { GiGlassCelebration } from "react-icons/gi";
 import { CgGym } from "@react-icons/all-files/cg/CgGym";
@@ -10,6 +10,8 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Product from "./Product";
 import { productData, responsive } from "./Data";
+import { Link } from "react-router-dom";
+import About from "../About/About";
 
 export default function Services(props) {
   const product = productData.map((item) => (
@@ -22,7 +24,7 @@ export default function Services(props) {
   ));
 
   return (
-    <section className="services_section">
+    <section className="services_section" id="services">
       <div className="container2">
         <h4>OUR SERVICES</h4>
         <h1>
@@ -30,9 +32,11 @@ export default function Services(props) {
         </h1>
         <div className="row">
           <div className="service">
-            <figure className="icon">
-              <FaHotel />
-            </figure>
+            <Link to="">
+              <figure className="icon">
+                <FaHotel />
+              </figure>
+            </Link>
             <h3>Rooms & Appartment</h3>
             <br />
             <p>
@@ -41,9 +45,11 @@ export default function Services(props) {
             </p>
           </div>
           <div className="service">
-            <figure className="icon">
-              <BiRestaurant />
-            </figure>
+            <Link to="">
+              <figure className="icon">
+                <BiRestaurant />
+              </figure>
+            </Link>
             <h3>Food & Restaurant</h3>
             <br />
             <p>
@@ -52,9 +58,11 @@ export default function Services(props) {
             </p>
           </div>
           <div className="service">
-            <figure className="icon">
-              <TbSwimming />
-            </figure>
+            <Link to="/pool">
+              <figure className="icon">
+                <TbSwimming />
+              </figure>
+            </Link>
             <h3>Pools</h3>
             <br />
             <p>
@@ -98,7 +106,7 @@ export default function Services(props) {
         </div>
         <div className="slider_image">
           <div className="slider">
-            <Carousel showDots={true} responsive={responsive}>
+            <Carousel showDots={false} responsive={responsive}>
               {product}
             </Carousel>
           </div>

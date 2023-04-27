@@ -1,33 +1,47 @@
 import React from "react";
 import "./navbar.css";
 import { Link, Navigate } from "react-router-dom";
-import { AiFillCaretDown } from 'react-icons/ai';
+import { AiFillCaretDown } from "react-icons/ai";
 
 export default function Navbar() {
+  const user = JSON.parse(localStorage.getItem("user"))
   return (
     <div>
       <nav className="navbar">
-        <h1 className="logo">HOTELIER</h1>
+        <Link to='/'>
+          <h1 className="logo">HOTELIER</h1>
+        </Link>
         <div className="navbar_end">
-          <a className="item">HOME</a>
-          <a className="item" href="#about">ABOUT</a>
-          <a className="item">SERVICES</a>
-          <a className="item">ROOMS</a>
+          <a className="item" href="http://localhost:3000">
+            HOME
+          </a>
+          <a className="item" href="#about">
+            ABOUT
+          </a>
+          <a className="item" href="#services">
+            SERVICES
+          </a>
+          <a className="item" href="http://localhost:3000/all-rooms">
+            ROOMS
+          </a>
           <a className="item">PAGES</a>
           <div className="dropdown">
             <button className="dropbtn">
-              <AiFillCaretDown/>
+              <AiFillCaretDown />
             </button>
             <div className="dropdown-content">
-              <a href="#">Booking</a>
-              <a href="#">Our Team</a>
-              <a href="#">Testimonial</a>
+              <a href="http://localhost:3000/booking">Booking</a>
+              <a href="#team">Our Team</a>
+              <a href="#menu">Menu</a>
             </div>
           </div>
-          <a href="http://localhost:3000/pool" className="item nav_item">POOL</a>
-
+          <a href="http://localhost:3000/pool" className="item nav_item">
+            POOL
+          </a>
         </div>
-        <Link to="/sign-in"><button className="navbar_button">Login</button></Link>  
+        <Link to="/sign-in">
+          <button className="navbar_button">{user ? "Log out" : "Login"}</button>
+        </Link>
       </nav>
     </div>
   );

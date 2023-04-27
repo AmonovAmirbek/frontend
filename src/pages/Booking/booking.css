@@ -74,6 +74,7 @@ select.halfwidth {
 	color: #fff;
 	font-size: 22px;
 	font-weight: 600;
+	transition: .3S;
 }
 
 .booking_button:hover{
