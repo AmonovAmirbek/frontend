@@ -24,9 +24,9 @@ export default function Classroom() {
         {data &&
           data.map((item) => (
             <div className="classroom_card" key={item.id}>
-              <Link to={`/room-detail/:id/${item.id}`}>
+              <Link to={`/room-detail/${item.id}`}>
                 <img
-                  src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`}
+                  // src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`}
                   alt=""
                 />
               </Link>
@@ -36,18 +36,16 @@ export default function Classroom() {
                   <h4>
                     <b>{item.attributes.title}</b>
                   </h4>
-                  <div className="card__content-top__stars"></div>
+                  <div className="card__content-top__stars">
+                    <h2>{item.attributes.price} $</h2>
+                  </div>
                 </div>
-                <br />
-                <FaBed fill={"gold"} /> {item.attributes.bed}
-                Bed |
-                <FaBath fill={"gold"} /> {item.attributes.bath}
-                Bath |
-                <FaWifi fill={"gold"} /> {item.attributes.wifi}
-                <p>
-                  Erat ipsum justo amet duo et elitr dolor, est duo duo eos
-                  lorem sed diam stet diam sed stet lorem.
-                </p>
+                <h3>
+                  <FaBed fill={"gold"} /> {item.attributes.bed} Bed |
+                  <FaBath fill={"gold"} /> {item.attributes.bath} Bath |
+                  <FaWifi fill={"gold"} /> {item.attributes.wifi}
+                </h3>
+                <p>{item.attributes.about}</p>
                 <br />
                 <div className="card_room-buttons">
                   <Link to={`/room-detail/${item.id}`}>

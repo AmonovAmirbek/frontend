@@ -6,7 +6,7 @@ export default Header;
 
 function Header(props) {
   return (
-    <div className="header">
+    <div className="header" id="header">
       <p>LUXURY LIVING</p>
       <h1>Discover A Brand</h1>
       <h1>Luxurious Hotel</h1>

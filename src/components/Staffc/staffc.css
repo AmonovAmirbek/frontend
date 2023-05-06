@@ -14,18 +14,18 @@
 
 .column__2 {
   border: 2px solid rgba(11, 1, 1, 0);
-    margin-top: 50px;
-  box-shadow: 0 0 5px 5px #333;
+  margin-top: 50px;
+  box-shadow: 0 0 5px 5px #cecaca;
 }
 
-.content h1{
-    font-size: 30px;
+.content h1 {
+  font-size: 30px;
 }
 
-.content h3{
-    color: #fea116;
+.content h3 {
+  color: #fea116;
 }
 
-.content span{
-    color: #fea116;
+.content span {
+  color: #fea116;
 }

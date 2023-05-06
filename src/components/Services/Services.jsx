@@ -32,7 +32,7 @@ export default function Services(props) {
         </h1>
         <div className="row">
           <div className="service">
-            <Link to="">
+            <Link to="all-rooms">
               <figure className="icon">
                 <FaHotel />
               </figure>
@@ -40,21 +40,22 @@ export default function Services(props) {
             <h3>Rooms & Appartment</h3>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              repellendus perferendis molestias! Excepturi?
+              The comfortable stay of our guests is very important for us, we
+              hope that you will be satisfied with our services. We love and are
+              proud of our work and will do our best to make .
             </p>
           </div>
           <div className="service">
-            <Link to="">
+            <a href="#menu">
               <figure className="icon">
                 <BiRestaurant />
               </figure>
-            </Link>
+            </a>
             <h3>Food & Restaurant</h3>
             <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              repellendus perferendis molestias! Excepturi?
+              I hope you like our food. Our food is sweeter and cheaper than
+              others.
             </p>
           </div>
           <div className="service">

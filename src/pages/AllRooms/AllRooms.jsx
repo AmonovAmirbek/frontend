@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./allRooms.css";
 import axios from "axios";
 import AllRoom from "../AllRoom/AllRoom";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import RoomDetail from "../RoomDetail/RoomDetail";
 import Layout from "../../components/Layout/Layout";
 
 export default function AllRooms() {

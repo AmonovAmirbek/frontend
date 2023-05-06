@@ -12,6 +12,9 @@ export default function Navbar() {
           <h1 className="logo">HOTELIER</h1>
         </Link>
         <div className="navbar_end">
+          <a className="item" href="http://localhost:3000/my-orders">
+            MY ORDERS
+          </a>
           <a className="item" href="http://localhost:3000">
             HOME
           </a>
@@ -30,7 +33,7 @@ export default function Navbar() {
               <AiFillCaretDown />
             </button>
             <div className="dropdown-content">
-              <a href="http://localhost:3000/booking">Booking</a>
+              <Link to="/booking/">Booking</Link>
               <a href="#team">Our Team</a>
               <a href="#menu">Menu</a>
             </div>

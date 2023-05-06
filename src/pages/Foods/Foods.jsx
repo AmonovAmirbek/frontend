@@ -1,14 +1,17 @@
 import React from "react";
 import "./food.css";
+import Layout from "../../components/Layout/Layout";
 
-export default function Foods({ item }) {
+export default function Foods({item}) {
   return (
-
+    <Layout>
       <div className="column-1">
+      {food &&
+          food.map((item) => (
         <div className="food_card">
           <div className="card-image-1">
             <img
-              src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`}
+              src=""
               alt=""
               width={250}
             />
@@ -16,14 +19,16 @@ export default function Foods({ item }) {
           <div className="card-content-1">
             <div className="media-1">
               <div className="media-content-1">
-                <h1>{item.attributes.name}</h1>
+                <h1></h1>
                 <p>Tomato sauce, mozzarella & oregano</p>
-                <p>{item.attributes.price} $</p>
-                <button className="button-1">To Order</button>
+                <p></p>
+                
               </div>
             </div>
           </div>
         </div>
+        ))}
       </div>
+      </Layout>
   );
 }

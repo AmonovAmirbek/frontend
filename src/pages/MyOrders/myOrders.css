@@ -1,0 +1,28 @@
+.my-orders{
+  height: 500px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  background-color: #eeededd4;
+}
+
+th {
+  font-size: 23px;
+}
+
+td {
+  font-size: 20px;
+  color: #333;
+}

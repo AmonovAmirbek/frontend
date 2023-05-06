@@ -21,6 +21,7 @@ export default function Staffc() {
                   src="https://fikiwiki.com/uploads/posts/2022-02/1644885630_59-fikiwiki-com-p-kartinki-uspeshnikh-muzhchin-59.jpg"
                   alt=""
                   width={280}
+                  height={260}
                 />
               </div>
               <div className="card-content__2">
@@ -30,7 +31,7 @@ export default function Staffc() {
                     <AiFillInstagram size={35} fill={"gold"} />
                     <AiFillTwitterCircle size={35} fill={"gold"} />
                     <br />
-                    <h1>Full Name</h1>
+                    <h1>John Dou</h1>
                     <br />
                     <p>Destignation</p>
                   </div>
@@ -42,9 +43,10 @@ export default function Staffc() {
             <div className="card__2">
               <div className="card-image__2">
                 <img
-                  src="https://fikiwiki.com/uploads/posts/2022-02/1644885630_59-fikiwiki-com-p-kartinki-uspeshnikh-muzhchin-59.jpg"
+                  src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
                   alt=""
                   width={280}
+                  height={260}
                 />
               </div>
               <div className="card-content__2">
@@ -54,7 +56,7 @@ export default function Staffc() {
                     <AiFillInstagram size={35} fill={"gold"} />
                     <AiFillTwitterCircle size={35} fill={"gold"} />
                     <br />
-                    <h1>Full Name</h1>
+                    <h1>Mayk Jordan</h1>
                     <br />
                     <p>Destignation</p>
                   </div>
@@ -66,9 +68,10 @@ export default function Staffc() {
             <div className="card__2">
               <div className="card-image__2">
                 <img
-                  src="https://fikiwiki.com/uploads/posts/2022-02/1644885630_59-fikiwiki-com-p-kartinki-uspeshnikh-muzhchin-59.jpg"
+                  src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80"
                   alt=""
                   width={280}
+                  height={260}
                 />
               </div>
               <div className="card-content__2">
@@ -78,7 +81,7 @@ export default function Staffc() {
                     <AiFillInstagram size={35} fill={"gold"} />
                     <AiFillTwitterCircle size={35} fill={"gold"} />
                     <br />
-                    <h1>Full Name</h1>
+                    <h1>Pedra Furada</h1>
                     <br />
                     <p>Destignation</p>
                   </div>
@@ -90,9 +93,10 @@ export default function Staffc() {
             <div className="card__2">
               <div className="card-image__2">
                 <img
-                  src="https://fikiwiki.com/uploads/posts/2022-02/1644885630_59-fikiwiki-com-p-kartinki-uspeshnikh-muzhchin-59.jpg"
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                   alt=""
                   width={280}
+                  height={260}
                 />
               </div>
               <div className="card-content__2">
@@ -102,7 +106,7 @@ export default function Staffc() {
                     <AiFillInstagram size={35} fill={"gold"} />
                     <AiFillTwitterCircle size={35} fill={"gold"} />
                     <br />
-                    <h1>Full Name</h1>
+                    <h1>George Vancouver</h1>
                     <br />
                     <p>Destignation</p>
                   </div>

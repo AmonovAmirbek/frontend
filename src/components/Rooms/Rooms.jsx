@@ -21,7 +21,7 @@ function Rooms() {
         </h1>
       </div>
       <div className="rooms__section-content">
-        {classes && classes.map((item) => <Room item={item} key={item.id}/>)}
+        {classes && classes.map((item) => <Room item={item} key={item.id} />)}
       </div>
 
       <div className="rooms__footer">
@@ -36,11 +36,13 @@ function Rooms() {
             lorem sit clita duo justo magna dolore erat amet
           </p>
           <Link to="/all-rooms">
-          <button className="rooms__footer-content__btn first">
-            OUR ROOMS
-          </button>
+            <button className="rooms__footer-content__btn first">
+              OUR ROOMS
+            </button>
           </Link>
-          <button className="rooms__footer-content__btn">BACK A ROOM</button>
+          <Link to={`/booking`}>
+            <button className="rooms__footer-content__btn">BOOKING</button>
+          </Link>
         </div>
         <div className="rooms__footer-img">
           <img

@@ -20,6 +20,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
+}
+.card__content h3{
+  font-size: larger;
 }
 
 .card__content-top__stars {
@@ -58,3 +62,4 @@ h4 {
   text-align: left;
   border-bottom: border-box;
 }
+

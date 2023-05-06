@@ -10,31 +10,29 @@
   left: 0;
   width: 100%;
   padding: 20px 100px;
-  background: #0F172B;
+  background: #0f172b;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  text-decoration: none;
 }
 
-.navbar h1{
-  text-decoration: none;
-  border: none;
-  color: #fea116;
+.navbar h1 {
+  text-decoration: underline;
 }
-.limk{
+.Link {
   text-decoration: none;
+  color: #fea116;
 }
 
 .logo {
   color: #fea116;
   font-size: 37px;
   cursor: pointer;
-  text-decoration: none;
-  border: none;
+  text-decoration: 2px solid #fea116;
   border: none;
 }
-
 
 .navbar_end {
   display: flex;
@@ -42,7 +40,7 @@
   color: #fea116;
   cursor: pointer;
   padding: 5px;
-  margin-left: 550px;
+  margin-left: 400px;
 }
 
 .item {
@@ -58,18 +56,19 @@
   float: left;
   text-align: center;
   align-items: center;
+  color: #fea116;
 }
 .navbar_end .nav_item {
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-    color: #fea116;
+  color: #fea116;
 }
 
 .navbar_end a:hover {
   background: #fea116;
   color: #fff;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .navbar_end a::after {
   content: "";
@@ -113,6 +112,8 @@
   min-width: 130px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  margin-left: -70px;
+  margin-top: -15px;
 }
 
 .dropdown-content a {

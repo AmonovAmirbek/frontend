@@ -18,9 +18,9 @@ function Pool({ item }) {
               lorem sit clita duo justo magna dolore erat amet
             </p>
             <h3>{item.attributes.price} $</h3>
-            <button className="pool__footer-content__btn">
+            {/* <button className="pool__footer-content__btn">
               BOOKING
-            </button>
+            </button> */}
           </div>
           <div className="pool_img">
             <img

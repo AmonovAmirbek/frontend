@@ -17,26 +17,15 @@ const Room = ({ item }) => {
       </Link>
       <div className="card__content">
         <div className="card__content-top">
-          <h4>
+          <h1>
             <b>{item.attributes.title}</b>
-          </h4>
-          <div className="card__content-top__stars">
-            <AiFillStar fill={"gold"} size={30} />
-            <AiFillStar fill={"gold"} size={30} />
-            <AiFillStar fill={"gold"} size={30} />
-            <AiFillStar fill={"gold"} size={30} />
-            <AiFillStar fill={"gold"} size={30} />
-          </div>
+          </h1>
         </div>
-        <br />
-        <FaBed fill={"gold"} /> {item.attributes.rooms.data[0].attributes.bed}{" "}
-        Bed |
-        <FaBath fill={"gold"} /> {item.attributes.rooms.data[0].attributes.bath}{" "}
-        Bath |
-        <FaWifi fill={"gold"} />
+        <h3><FaBed fill={"gold"} /> {item.attributes.rooms.data[0].attributes.bed} Bed |
+        <FaBath fill={"gold"} /> {item.attributes.rooms.data[0].attributes.bath} Bath |
+        <FaWifi fill={"gold"} /></h3>
         <p>
-          Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed
-          diam stet diam sed stet lorem.
+        {item.attributes.about}
         </p>
         <br />
         <div className="card__content-buttons">

@@ -54,15 +54,30 @@
   color: #333;
 }
 
-h4 {
+.card__content-top h4 {
   font-size: 23px;
   line-height: 60px;
-  text-align: left;
+  text-align: center;
+  margin-left: 80px;
   border-bottom: border-box;
+}
+
+.card__content-top h2{
+  color: #212529;
+  border: 2px solid #fea116;
+  width: 100px;
+  border-radius: 15px;
+}
+
+.card__content h3{
+  font-size: 18px;
+  text-align: center;
+  
 }
 
 .classroom{
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }

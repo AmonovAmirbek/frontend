@@ -6,19 +6,18 @@ import StarRating from "../../components/StarRating/StarRating";
 import axios from "axios";
 import { ROOM, REVIEWS } from "../../utils/urls";
 
+
 export default function RoomDetail() {
   const params = useParams();
 
   const [data, setData] = useState([]);
-  const [load, setLoad] = useState(false)
+  const [load, setLoad] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(ROOM.replace(":id", params.id))
-      .then((res) => {
-        setData(res.data.data)
-        setLoad(true)
-      });
+    axios.get(ROOM.replace(":id", params.id)).then((res) => {
+      setData(res.data.data);
+      setLoad(true);
+    });
   }, []);
 
   console.log(data);
@@ -37,37 +36,43 @@ export default function RoomDetail() {
 
   const loadReviews = () => {
     axios
-      .get(REVIEWS.replace("productId", params.id))
+      .get(REVIEWS.replace("roomId", params.id))
       .then((res) => setReviews(res.data.data))
       .catch((err) => console.error(err));
   };
 
+  useEffect(() => {
+    loadReviews();
+  }, []);
+
   const addReview = async (event) => {
     event.preventDefault();
     await axios
-      .post(REVIEWS, {
+      .post("http://localhost:1337/api/reviews", {
         data: {
           body,
-          user,
-          point: ratingList[rating],
+          customer: user,
+          rating: ratingList[rating],
+          room: data.id
         },
       })
       .then((res) => {
-        console.log(res.data.data);
         setBody("");
         setRating(null);
         loadReviews();
       })
       .catch((err) => console.error(err));
   };
-    return (
-      <section>
-        <Layout>
-          <br />
-          <div className="section__55">
-            {load ? (<div className="columns__55">
+  console.log(rating);
+  return (
+    <section>
+      <Layout>
+        <br />
+        <div className="section__55">
+          {load ? (
+            <div className="columns__55">
               <div className="room_img">
-                 <img
+                <img
                   src={`http://localhost:1337${data.attributes.image.data[0].attributes.url}`}
                   alt=""
                 />
@@ -75,27 +80,54 @@ export default function RoomDetail() {
               <div className="column__45">
                 <h1>{data.attributes.title}</h1>
                 <p>
-                  Lorem ipsum dolor, sit amet <br /> consectetur adipisicing
-                  elit. Libero <br /> eos minima voluptates hic quas <br />{" "}
-                  dolores? Et nam laboriosam ab consequatur <br /> delectus,
-                  libero veritatis nostrum <br /> explicabo amet fuga vel nemo
-                  illo. Nostrum <br />
-                  molestias inventore culpa mollitia.
+                  {data.attributes.about}
                 </p>
-                <h1 className="text__76"></h1>
+                <h1 className="text__76">{data.attributes.price} $</h1>
                 <StarRating
                   object={ratingList}
                   rating={rating}
                   setRating={setRating}
                 />
+                <div className="detail_input">
+                  <form onSubmit={(e) => addReview(e)}>
+                    <input
+                      type="text"
+                      placeholder="Enter your comment"
+                      onChange={(e) => setBody(e.target.value)}
+                      value={body}
+                    />
+                    <button className="detail_button" type="submit">
+                      Submit
+                    </button>
+                  </form>
+                </div>
 
-                <Link to="/booking">
+                <Link to={`/booking`}>
                   <button className="button__77">BOOKING</button>
                 </Link>
               </div>
-            </div>): ""}
-          </div>
-        </Layout>
-      </section>
-    );
-  }
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+
+        <div className="detail_card">
+          <h1>Reviews of other clients</h1>
+          {reviews &&
+            reviews.map((review) => (
+              <div className="comment" key={review.id}>
+                <div className="media_content">
+                  <h2 className="title">
+                    {review.attributes.customer.data.attributes.username}
+                  </h2>
+                  <h4 className="subtitle">{review.attributes.rating}</h4>
+                </div>
+                <div className="content"><p>{review.attributes.body}</p></div>
+              </div>
+            ))}
+        </div>
+      </Layout>
+    </section>
+  );
+}

@@ -16,43 +16,44 @@ export default function Footer() {
           <span>HOTELIER</span>
         </h3>
 
-        <p className="footer-links">
-          <a  className="link-1">
-            Home
-          </a>
+        <div className="footer-links">
+          <a href="#header">Home</a>
 
-          <a id="about">About</a>
+          <a href="#about">About</a>
 
-          <a id="services">Services</a>
+          <a href="#services">Services</a>
 
-          <a id="rooms">Rooms</a>
+          <a href="#rooms">Classes</a>
 
-          <a id="menu">Menu</a>
-        </p>
+          <a href="#menu">Menu</a>
+        </div>
 
         <p className="footer-company-name">HOTELIER © 2015</p>
       </div>
 
       <div className="footer-center">
         <div>
-            
           <p>
-          <FiMapPin /> <span>Zulfiya ko'chasi</span> Bukhara Region, Uzbekistan
+            <FiMapPin /> <span>Wall Street, </span>New York, USA
           </p>
         </div>
         <br />
 
         <div>
-          <p> <BsFillTelephoneFill />     
-            +998936224020</p>
+          <p>
+            {" "}
+            <BsFillTelephoneFill />
+            +998936224020
+          </p>
         </div>
       </div>
 
       <div className="footer-right">
         <p className="footer-company-about">
           <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-          euismod convallis velit, eu auctor lacus vehicula sit amet.
+          "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Alique
+          diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+          lorem sit clita duo justo magna dolore erat amet"
         </p>
 
         <div className="footer-icons">

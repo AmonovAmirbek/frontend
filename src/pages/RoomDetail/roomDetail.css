@@ -1,6 +1,8 @@
 .section__55 {
   background: rgb(243, 239, 239);
-  height: 500px;
+  height: 700px;
+  justify-content: center;
+  margin: auto;
 }
 
 .columns__55 {
@@ -18,8 +20,8 @@
   margin-bottom: 10%;
   margin-right: 150px;
   border: 2px solid #333;
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  width: 600px;
 }
 
 .column__45 {
@@ -31,7 +33,10 @@
 }
 
 .text__76 {
-  color: red;
+  color: #212529;
+  border: 2px solid #fea116;
+  width: 100px;
+  border-radius: 15px;
 }
 
 .text__80 {
@@ -40,7 +45,7 @@
 
 .button__77 {
   color: white;
-  width: 300px;
+  width: 380px;
   height: 40px;
   background: #fea116;
   font-weight: 700;
@@ -49,10 +54,110 @@
   cursor: pointer;
   border: 2px solid #fea116;
   margin-top: 20px;
+  margin-right: 80px;
   transition: .3s;
 }
 
 .button__77:hover {
   color: #333;
   background: transparent;
+}
+.form{
+  width: 700px;
+  margin-right: 80px;
+  
+}
+
+.detail_input input{
+  flex: 1;
+  outline: none;
+  width: 300px;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: none;
+  margin-right: 160px;
+  transition: border-color 0.20s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.detail_button{
+  position: absolute;
+  background: #fea116;
+  height: calc(2.25rem + 2px);
+  background-clip: padding-box;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+  margin-left: -160px;
+  transition: border-color 0.20s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+.detail_button:hover{
+  opacity: 50%;
+  background: #fea116;
+}
+
+.detail_card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.detail_card h1{
+  padding: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  background: #FFE4E1;
+  width: 100%;
+
+}
+
+.detail_card h2{
+  color: #FE654F;
+
+}
+
+.detail_card h4{
+  text-align: center;
+  color: #333;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.comment{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  margin: auto 1rem;
+  text-align: center;
+  font-family: arial;
+  background: rgb(243, 239, 239);
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 40px;
+  border: 10px solid transparent;
+  padding: 10px;
+  border-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRACLh6Ywx4MNWYuYfubZ9QYsEpObLKEQfnWg&usqp=CAU) 30 stretch;
+}
+
+.detail_card p{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.column__45 p{
+  width: 400px;
+  text-align: left;
 }
