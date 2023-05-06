@@ -1,23 +1,31 @@
 .columns__2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    ;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .section__2 {
-justify-content: space-between;
-align-items: center;
-text-align: center;
-
-
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 600px;
 }
 
 .column__2 {
-    border: 2px solid rgba(11, 1, 1, 0);
-    
-    box-shadow: 0 0 5px 5px #333;
-    
+  border: 2px solid rgba(11, 1, 1, 0);
+  margin-top: 50px;
+  box-shadow: 0 0 5px 5px #cecaca;
 }
 
+.content h1 {
+  font-size: 30px;
+}
+
+.content h3 {
+  color: #fea116;
+}
+
+.content span {
+  color: #fea116;
+}

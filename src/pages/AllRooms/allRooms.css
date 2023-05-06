@@ -1,0 +1,31 @@
+.rooms_section {
+  text-align: center;
+  margin: 20px 0px;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.rooms_header h4 {
+  display: inline-block;
+  font-weight: 800;
+  color: #fea116;
+  margin: 0px;
+}
+
+.rooms_ h1 {
+  color: #0f172b;
+  font-weight: 800;
+  font-size: 40px;
+  margin: 0px;
+}
+
+.rooms_ span {
+  color: #fea116;
+}
+
+.rooms__section {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
