@@ -1,20 +1,21 @@
 import React, {useState, useEffect} from "react";
 import "./menu.css";
 import { Link } from "react-router-dom";
-import { FOOD } from "../../utils/urls";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import { useParams } from "react-router-dom";
+import Foods from "../../pages/Foods/Foods";
+
 
 
 export default function Menu() {
   const params = useParams();
-  const [food, setFood] = useState([]);
+  const [foods, setFoods] = useState([]);
   useEffect(() => {
     axios
-      .get(FOOD.replace(":id", params.id))
-      .then((res) => setFood(res.data.data));
+      .get("http://localhost:1337/api/foods/:id?populate=image&populate=category")
+      .then((res) => console.log(res.data.data));
   }, []);
-  console.log(food);
+  console.log(foods);
   return (
     <div className="menu" id="menu">
       <div className="section_1">
@@ -25,6 +26,8 @@ export default function Menu() {
           ambience as you enjoy the aromas of the wood ovens or sit al fresco
           and soak up the Mildura <br /> sunshine.
         </p>
+
+        {foods && foods.map((item) => <Foods item={item} key={item.id}/>)}
         <div className="menu_wrapper">
           <Link to="/foods">
             <div className="menu_card">
@@ -66,7 +69,7 @@ export default function Menu() {
                 alt=""
               />
               <div className="info">
-                <h3>DISERT</h3>
+                <h3>DISSERT</h3>
               </div>
             </div>
           </Link>

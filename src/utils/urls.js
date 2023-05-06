@@ -3,7 +3,7 @@ export const ROOM =
 export const CLASS =
     'http://localhost:1337/api/classes/:id?populate=image&populate=rooms    '
 export const FOOD = 
-    'http://localhost:1337/api/foods/:id?populate=image'
+    'http://localhost:1337/api/foods/:id?populate=image&populate=category'
 export const POOL =
     'http://localhost:1337http:/api/pools/:id?populate=image&populate=order_pool'
 export const REVIEWS =

@@ -1,13 +1,23 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./food.css";
 import Layout from "../../components/Layout/Layout";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
-export default function Foods({item}) {
+
+export default function Foods() {
+  const params = useParams();
+  const [foods, setFoods] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/api/foods/:id?populate=image&populate=category")
+      .then(res => console.log(res.data.data));
+  }, []);
+  console.log(foods);
   return (
     <Layout>
+      
       <div className="column-1">
-      {food &&
-          food.map((item) => (
         <div className="food_card">
           <div className="card-image-1">
             <img
@@ -27,7 +37,6 @@ export default function Foods({item}) {
             </div>
           </div>
         </div>
-        ))}
       </div>
       </Layout>
   );
