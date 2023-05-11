@@ -29,6 +29,8 @@
 .pool__footer-content {
   font-size: 18px;
   text-align: center;
+  height: 425px;
+  border: 2px solid #333;
 }
 
 .pool__footer-content__btn {
@@ -73,7 +75,8 @@
 
 .pool_img img {
   width: 800px;
-  height: 415px;
+  height: 425px;
+  border: 2px solid #333;
 }
 .pool__content-top__stars {
   margin: 10px, 0px;

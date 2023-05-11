@@ -56,7 +56,7 @@ export default function Staffc() {
                     <AiFillInstagram size={35} fill={"gold"} />
                     <AiFillTwitterCircle size={35} fill={"gold"} />
                     <br />
-                    <h1>Mayk Jordan</h1>
+                    <h1>Maykl Jordan</h1>
                     <br />
                     <p>Destignation</p>
                   </div>

@@ -2,18 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./booking.css";
 import Layout from "../../components/Layout/Layout";
 import axios from "axios";
-import { ORDER } from "../../utils/urls";
-import { Link, Navigate } from "react-router-dom";
-import { openPopup, closePopup } from "./script";
-import { GiCoffin } from "react-icons/gi";
 import { CLASS } from "../../utils/urls";
+import { useNavigate } from "react-router-dom";
 
 function Booking() {
   const [customer] = useState(JSON.parse(localStorage.getItem("user")));
   const [confirm, setConfirm] = useState(false);
   const [classes, setClasses] = useState([]);
   const [rooms, setRooms] = useState([]);
-  const navigate = Navigate("");
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -22,6 +19,8 @@ function Booking() {
   const [total, setTotal] = useState(0);
   const [room, setRoom] = useState({});
   const [value, setValue] = useState("");
+
+  const [orderProduct, setOrderProduct] = useState(null);
 
   const load = () => {
     axios.get("http://localhost:1337/api/classes?populate=*").then((res) => {
@@ -51,6 +50,35 @@ function Booking() {
     }
   }, [value]);
 
+  const getPrice = () => {
+    if (confirm) {
+      const date1 = new Date(from);
+      const date2 = new Date(to);
+
+      const diffTime = Math.abs(date2.getTime() - date1.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      return diffDays;
+    }
+  };
+
+  const confirmOrder = () => {
+    axios
+      .post("http://localhost:1337/api/orders", {
+        data: {
+          order_room: orderProduct,
+          total: getPrice() * Number(room[0].attributes.price),
+          number: phone,
+          customer: customer,
+          from: from,
+          to: to
+        },
+      })
+      .then((res) => {
+        navigate('/my-orders')
+      })
+  }
+
   const createOrder = (e) => {
     e.preventDefault();
     axios
@@ -66,18 +94,11 @@ function Booking() {
       .then((res) => {
         console.log(res.data.data);
         setConfirm(true);
+        setOrderProduct(res.data.data)
       })
       .catch((err) => console.error(err));
   };
 
-  const getPrice = () => {
-    if (confirm) {
-      const days =
-        Number(String(to).split("-")[2]) -
-        Number(String(from).split("-").join("")[2]);
-      console.log(days);
-    }
-  };
   return (
     <Layout>
       <div className="booking__section">
@@ -207,11 +228,11 @@ function Booking() {
                   <h3>
                     Date: {from} - {to}
                   </h3>
-                  <h3>Total: {getPrice()}</h3>
+                  <h3>
+                    Total: ${getPrice() * Number(room[0].attributes.price)}
+                  </h3>
                 </div>
-                <Link to="/my-orders">
-                  <button className="yes">Yes</button>
-                </Link>
+                <button className="yes" onClick={() => confirmOrder()}>Yes</button>
                 <button className="no" onClick={() => setConfirm(false)}>
                   No
                 </button>

@@ -24,7 +24,7 @@ export default function App() {
                 <Route path='/all-rooms' element={<AllRooms/>}/>
                 <Route path='/class-room/:id' element={<Classroom/>}/>
                 <Route path='/my-orders' element={<MyOrders/>}/>
-                <Route path='/foods' element={<Foods/>}/>
+                <Route path='/foods/:category' element={<Foods/>}/>
                 
             </Routes>
         </BrowserRouter>

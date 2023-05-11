@@ -1,21 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./menu.css";
 import { Link } from "react-router-dom";
+import { CATEGORY } from "../../utils/urls";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import Foods from "../../pages/Foods/Foods";
-
-
 
 export default function Menu() {
-  const params = useParams();
-  const [foods, setFoods] = useState([]);
-  useEffect(() => {
-    axios
-      .get("http://localhost:1337/api/foods/:id?populate=image&populate=category")
-      .then((res) => console.log(res.data.data));
-  }, []);
-  console.log(foods);
   return (
     <div className="menu" id="menu">
       <div className="section_1">
@@ -26,10 +15,8 @@ export default function Menu() {
           ambience as you enjoy the aromas of the wood ovens or sit al fresco
           and soak up the Mildura <br /> sunshine.
         </p>
-
-        {foods && foods.map((item) => <Foods item={item} key={item.id}/>)}
         <div className="menu_wrapper">
-          <Link to="/foods">
+          <Link to={`/foods/pitsa`}>
             <div className="menu_card">
               <img
                 src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80"
@@ -40,7 +27,7 @@ export default function Menu() {
               </div>
             </div>
           </Link>
-          <Link to="/foods">
+          <Link to={`/foods/salads`}>
             <div className="menu_card">
               <img
                 src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2FsYWRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
@@ -51,7 +38,7 @@ export default function Menu() {
               </div>
             </div>
           </Link>
-          <Link to="/foods">
+          <Link to={`/foods/drinks`}>
             <div className="menu_card">
               <img
                 src="https://images.unsplash.com/photo-1597403491447-3ab08f8e44dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGRyaW5rc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
@@ -62,7 +49,7 @@ export default function Menu() {
               </div>
             </div>
           </Link>
-          <Link to="/foods">
+          <Link to={`/foods/desserts`}>
             <div className="menu_card">
               <img
                 src="https://img.freepik.com/premium-photo/concept-of-tasty-dessert-with-tiramisu-cake-close-up_185193-79660.jpg?w=1060"

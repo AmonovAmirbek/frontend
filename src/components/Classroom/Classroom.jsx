@@ -26,12 +26,12 @@ export default function Classroom() {
             <div className="classroom_card" key={item.id}>
               <Link to={`/room-detail/${item.id}`}>
                 <img
-                  // src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`}
+                  src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`}
                   alt=""
                 />
               </Link>
 
-              <div className="card__content">
+              <div className="card__content"> 
                 <div className="card__content-top">
                   <h4>
                     <b>{item.attributes.title}</b>
