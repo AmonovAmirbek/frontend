@@ -33,7 +33,7 @@ export default function Staffc() {
                     <br />
                     <h1>John Dou</h1>
                     <br />
-                    <p>Destignation</p>
+                    <p>Our Manager</p>
                   </div>
                 </div>
               </div>
@@ -56,9 +56,9 @@ export default function Staffc() {
                     <AiFillInstagram size={35} fill={"gold"} />
                     <AiFillTwitterCircle size={35} fill={"gold"} />
                     <br />
-                    <h1>Maykl Jordan</h1>
+                    <h1>Alex</h1>
                     <br />
-                    <p>Destignation</p>
+                    <p>Our Chef</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Staffc() {
                     <br />
                     <h1>Pedra Furada</h1>
                     <br />
-                    <p>Destignation</p>
+                    <p>Our waiter</p>
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function Staffc() {
                     <br />
                     <h1>George Vancouver</h1>
                     <br />
-                    <p>Destignation</p>
+                    <p>Our Guid</p>
                   </div>
                 </div>
               </div>

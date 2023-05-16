@@ -2,7 +2,7 @@ import React from "react";
 import { FaHotel } from "react-icons/fa";
 import { BiRestaurant } from "react-icons/bi";
 import { TbId, TbSwimming } from "react-icons/tb";
-import { FaSwimmer } from "react-icons/fa";
+import { MdSportsKabaddi } from "react-icons/md";
 import { GiGlassCelebration } from "react-icons/gi";
 import { CgGym } from "@react-icons/all-files/cg/CgGym";
 import "./services.css";
@@ -73,7 +73,7 @@ export default function Services(props) {
           </div>
           <div className="service">
             <figure className="icon">
-              <FaSwimmer />
+              <MdSportsKabaddi />
             </figure>
             <h3>Sport & Gaming</h3>
             <br />

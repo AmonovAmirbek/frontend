@@ -149,6 +149,7 @@ function Booking() {
             <input
               type="text"
               name="field3"
+              required
               className="field-long"
               placeholder="Your Phone"
               onChange={(e) => setPhone(e.target.value)}
@@ -157,6 +158,7 @@ function Booking() {
             <input
               type="date"
               name="field3"
+              required
               className="field-long"
               placeholder="Check In"
               onChange={(e) => setFrom(e.target.value)}
@@ -165,6 +167,7 @@ function Booking() {
             <input
               type="date"
               name="field3"
+              required
               className="field-long"
               placeholder="Check Out"
               onChange={(e) => setTo(e.target.value)}
