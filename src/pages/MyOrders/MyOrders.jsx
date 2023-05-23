@@ -2,30 +2,35 @@ import React, { useEffect, useState } from "react";
 import "./myOrders.css";
 import Layout from "../../components/Layout/Layout";
 import axios from "axios";
-import { RiShoppingBasket2Line } from 'react-icons/ri'
-
+import { RiShoppingBasket2Line } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 export default function MyOrders() {
+  const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
   const [user] = useState(JSON.parse(localStorage.getItem("user")));
 
   useEffect(() => {
-    axios
-      .get(
-        `http://localhost:1337/api/orders/?populate=order_room.rooms.class&&filters[customer][username]=${user.username}`
-      )
-      .then((res) => {
-        setOrders(res.data.data);
-      });
+    if (!user) {
+      navigate("/sign-in");
+    } else {
+      axios
+        .get(
+          `http://localhost:1337/api/orders/?populate=order_room.rooms.class&&filters[customer][username]=${user.username}`
+        )
+        .then((res) => {
+          setOrders(res.data.data);
+        });
+    }
   }, []);
-  console.log(orders);
+
   return (
     <Layout>
       <div className="my_orders">
         {!orders.length ? (
           <div className="no_order">
             <h1>No orders</h1>
-            <RiShoppingBasket2Line size={30}/>
+            <RiShoppingBasket2Line size={30} />
           </div>
         ) : (
           <table>

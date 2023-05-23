@@ -30,7 +30,7 @@ export default function SignIn(props) {
         localStorage.setItem("token", JSON.stringify(res.data.jwt));
         navigate("/");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => alert("This account was not found"));
   };
   return (
     <div className="signUp-section">

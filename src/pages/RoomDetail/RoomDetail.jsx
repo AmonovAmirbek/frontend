@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout";
 import "./roomDetail.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import StarRating from "../../components/StarRating/StarRating";
 import axios from "axios";
 import { ROOM, REVIEWS } from "../../utils/urls";
@@ -9,9 +9,9 @@ import { ROOM, REVIEWS } from "../../utils/urls";
 
 export default function RoomDetail() {
   const params = useParams();
-
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
+  const navigate = useNavigate('')
 
   useEffect(() => {
     axios.get(ROOM.replace(":id", params.id)).then((res) => {
@@ -24,6 +24,11 @@ export default function RoomDetail() {
 
   const [body, setBody] = useState("");
   const [reviews, setReviews] = useState([]);
+
+  const redirect = () => {
+    localStorage.setItem("room", JSON.stringify(data))
+    navigate('/booking')
+  }
   //---
   const ratingList = {
     1: "bad",
@@ -101,10 +106,7 @@ export default function RoomDetail() {
                     </button>
                   </form>
                 </div>
-
-                <Link to={`/booking`}>
-                  <button className="button__77">BOOKING</button>
-                </Link>
+                 <button className="button__77" onClick={() => redirect()}>BOOKING</button>
               </div>
             </div>
           ) : (

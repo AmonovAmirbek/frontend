@@ -33,7 +33,7 @@ export default function Navbar() {
               <AiFillCaretDown />
             </button>
             <div className="dropdown-content">
-              <Link to="/booking/">Booking</Link>
+              <Link to="/booking">Booking</Link>
               <a href="#team">Our Team</a>
               <a href="#menu">Menu</a>
             </div>

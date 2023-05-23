@@ -3,7 +3,7 @@ import "./booking.css";
 import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import { CLASS } from "../../utils/urls";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Booking() {
   const [customer] = useState(JSON.parse(localStorage.getItem("user")));
@@ -19,33 +19,48 @@ function Booking() {
   const [total, setTotal] = useState(0);
   const [room, setRoom] = useState({});
   const [value, setValue] = useState("");
-
   const [orderProduct, setOrderProduct] = useState(null);
 
   const load = () => {
+    const locale = JSON.parse(localStorage.getItem('room'))
+
     axios.get("http://localhost:1337/api/classes?populate=*").then((res) => {
       setClasses(res.data.data);
-      setValue(res.data.data[0].attributes.title);
+      if (!locale) {
+        setValue(res.data.data[0].attributes.title);
+      } else {
+        setValue(locale.attributes.class.data.attributes.title)
+      }
     });
   };
 
   useEffect(() => {
-    load();
+    if (!customer) {
+      navigate("/sign-in");
+    } else {
+      load();
+    }
   }, []);
 
   useEffect(() => {
+    const locale = JSON.parse(localStorage.getItem('room'))
     if (classes && classes[0]) {
       axios
         .get(
           CLASS.replace(
             ":id",
             classes.filter((item) => item.attributes.title === value)[0] &&
-              classes.filter((item) => item.attributes.title === value)[0].id
+            classes.filter((item) => item.attributes.title === value)[0].id
           )
         )
         .then((res) => {
           setRooms(res.data.data.attributes.rooms.data);
-          setRoom([res.data.data.attributes.rooms.data[0]]);
+          if (!locale) {
+            setRoom(res.data.data.attributes.rooms.data[0]);
+          } else {
+            setRoom(locale)
+            localStorage.removeItem('room')
+          }
         });
     }
   }, [value]);
@@ -67,17 +82,17 @@ function Booking() {
       .post("http://localhost:1337/api/orders", {
         data: {
           order_room: orderProduct,
-          total: getPrice() * Number(room[0].attributes.price),
+          total: getPrice() * Number(room.attributes.price),
           number: phone,
           customer: customer,
           from: from,
-          to: to
+          to: to,
         },
       })
       .then((res) => {
-        navigate('/my-orders')
-      })
-  }
+        navigate("/my-orders");
+      });
+  };
 
   const createOrder = (e) => {
     e.preventDefault();
@@ -94,10 +109,11 @@ function Booking() {
       .then((res) => {
         console.log(res.data.data);
         setConfirm(true);
-        setOrderProduct(res.data.data)
+        setOrderProduct(res.data.data);
       })
       .catch((err) => console.error(err));
   };
+  
 
   return (
     <Layout>
@@ -178,6 +194,7 @@ function Booking() {
               name="field4"
               className="halfwidth"
               placeholder="Adult 1"
+              value={value}
               onChange={(e) => setValue(e.target.value)}
             >
               {classes &&
@@ -196,6 +213,7 @@ function Booking() {
               name="field4"
               className="halfwidth"
               placeholder="Adult 1"
+              value={room && room.attributes ? room.attributes.title : ''}
               onChange={(e) =>
                 setRoom(
                   rooms.filter(
@@ -227,15 +245,17 @@ function Booking() {
                 <h2>Do you really want to order it?</h2>
                 <div className="room_about">
                   <h3>Class: {value}</h3>
-                  <h3>Room: {room[0].attributes.title}</h3>
+                  <h3>Room: {room.attributes.title}</h3>
                   <h3>
                     Date: {from} - {to}
                   </h3>
                   <h3>
-                    Total: ${getPrice() * Number(room[0].attributes.price)}
+                    Total: ${getPrice() * Number(room.attributes.price)}
                   </h3>
                 </div>
-                <button className="yes" onClick={() => confirmOrder()}>Yes</button>
+                <button className="yes" onClick={() => confirmOrder()}>
+                  Yes
+                </button>
                 <button className="no" onClick={() => setConfirm(false)}>
                   No
                 </button>

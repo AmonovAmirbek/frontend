@@ -11,13 +11,14 @@ export default function SignUp(props) {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [password2, setPassword2] = useState("");
 
   const navigate = useNavigate();
 
   const signUp = (e) => {
     e.preventDefault();
-    axios
-      .post("http://localhost:1337/api/users/", {
+    if (password === password2){
+      axios.post("http://localhost:1337/api/users/", {
         username: username,
         email: email,
         password: password,
@@ -25,7 +26,8 @@ export default function SignUp(props) {
         role: 1,
       })
       .then((res) => navigate("/sign-in"))
-      .catch((err) => console.error(err));
+      .catch((err) => console.log(err));
+    }
   };
   return (
     <div className="signIn-section">
@@ -75,6 +77,18 @@ export default function SignUp(props) {
                 required
               />
               <label>Password</label>
+            </div>
+            <div className="input_box">
+              <span className="sign_icon">
+                <HiLockClosed />
+              </span>
+              <input
+                type="password"
+                onChange={(e) => setPassword2(e.target.value)}
+                value={password2}
+                required
+              />
+              <label>Confirm Password</label>
             </div>
             <div className="remember_forgot">
               <label>
