@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const Room = ({ item }) => {
   return (
     <div className="card">
+
       <Link to={`/class-room/${item.id}`}>
         <img
           src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`}
